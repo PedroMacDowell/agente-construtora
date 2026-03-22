@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente IA — Comunicação de Obras</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-icon">🏗️</div>
+    <div>
+      <h1>Agente IA — Comunicação de Obras</h1>
+      <p>Sistema automatizado de mensagens para clientes • 6 prompts ativos</p>
+    </div>
+  </header>
+
+  <div class="app">
+
+    
+    <aside class="sidebar">
+      <div class="sidebar-section">Prompts</div>
+
+      <button class="prompt-btn active" onclick="selectPrompt(0)">
+        <div class="prompt-icon">✅</div>
+        <div>
+          <div class="prompt-label">Etapa Concluída</div>
+          <div class="prompt-sub">Prompt 01</div>
+        </div>
+      </button>
+
+      <button class="prompt-btn" onclick="selectPrompt(1)">
+        <div class="prompt-icon">🔔</div>
+        <div>
+          <div class="prompt-label">Boleto Vencendo</div>
+          <div class="prompt-sub">Prompt 02</div>
+        </div>
+      </button>
+
+      <button class="prompt-btn" onclick="selectPrompt(2)">
+        <div class="prompt-icon">💬</div>
+        <div>
+          <div class="prompt-label">Dúvidas do Cliente</div>
+          <div class="prompt-sub">Prompt 03</div>
+        </div>
+      </button>
+
+      <button class="prompt-btn" onclick="selectPrompt(3)">
+        <div class="prompt-icon">⚠️</div>
+        <div>
+          <div class="prompt-label">Atraso de Etapa</div>
+          <div class="prompt-sub">Prompt 04</div>
+        </div>
+      </button>
+
+      <button class="prompt-btn" onclick="selectPrompt(4)">
+        <div class="prompt-icon">🎉</div>
+        <div>
+          <div class="prompt-label">Entrega Final</div>
+          <div class="prompt-sub">Prompt 05</div>
+        </div>
+      </button>
+
+      <button class="prompt-btn" onclick="selectPrompt(5)">
+        <div class="prompt-icon">📊</div>
+        <div>
+          <div class="prompt-label">Resumo Semanal</div>
+          <div class="prompt-sub">Prompt 06</div>
+        </div>
+      </button>
+
+      <div class="global-config">
+        <label>Nome da Construtora</label>
+        <input type="text" id="nomeConstrutora" placeholder="Ex: Silva Construtora">
+      </div>
+    </aside>
+
+   
+    <div class="main">
+
+      <div class="form-panel" id="formPanel"></div>
+
+      <div class="output-panel">
+        <div class="output-header">
+          <span>Mensagem Gerada</span>
+          <button class="copy-btn" id="copyBtn" onclick="copyMessage()" style="display:none">
+            📋 Copiar
+          </button>
+        </div>
+        <div class="output-body" id="outputBody">
+          <div class="empty-state">
+            <div class="big-icon">✉️</div>
+            <p>Preencha os dados e clique em Gerar Mensagem</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
